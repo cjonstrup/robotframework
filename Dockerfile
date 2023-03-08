@@ -1,7 +1,7 @@
 FROM python:3.8
 
 RUN apt -y update && \
-	apt -y install vim npm nodejs
+	apt -y install vim npm nodejs mc
 
 RUN pip3 install \
   --no-cache-dir \
@@ -11,8 +11,12 @@ COPY tests /tests
 
 WORKDIR /tests
 
+CMD [ "python", "./test.py" ]
 
-#docker built --no-cache -t test .
+
+#docker build --no-cache -t test .
+
+#docker run -it --rm test
 
 #docker run --rm -e DISPLAY=:0 -v /tmp/.X11-unix:/tmp/.X11-unix -v /mnt/wslg:/mnt/wslg mcr.microsoft.com/playwright:v1.31.2-focal npx -y playwright open google.com
 
