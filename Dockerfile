@@ -4,17 +4,19 @@ RUN apt -y update && \
 	apt -y install vim mc
 
 RUN pip3 install \
-  --no-cache-dir \
-  --upgrade \
-  chardet \
-  robotframework \
-  robotframework-seleniumlibrary \
-  requests \
-  certifi \
-  urllib3 \
-  six \
-  pyautogui \
-  selenium
+    --no-cache-dir \
+    --upgrade \
+    chardet \
+    robotframework \
+    robotframework-seleniumlibrary \
+    requests \
+    certifi \
+    urllib3 \
+    six \
+    pyautogui \
+    selenium \
+    webdrivermanager && \
+    webdrivermanager chrome --linkpath /usr/local/bin
 
 COPY tests /tests
 
