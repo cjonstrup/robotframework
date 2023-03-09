@@ -10,6 +10,7 @@ RUN pip3 install \
   robotframework \
   robotframework-seleniumlibrary \
   requests \
+  certifi \
   urllib3 \
   six \
   pyautogui \
