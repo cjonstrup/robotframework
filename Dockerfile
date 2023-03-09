@@ -5,7 +5,12 @@ RUN apt -y update && \
 
 RUN pip3 install \
   --no-cache-dir \
-  robotframework
+  robotframework \
+  robotframework-seleniumlibrary \
+  requests \
+  urllib3 \
+  six \
+  selenium
 
 COPY tests /tests
 
