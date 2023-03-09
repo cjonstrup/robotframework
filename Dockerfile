@@ -1,16 +1,18 @@
 FROM python:3.8
 
 RUN apt -y update && \
-	apt -y install vim npm nodejs mc
+	apt -y install vim mc
 
 RUN pip3 install \
   --no-cache-dir \
   --upgrade \
+  chardet \
   robotframework \
   robotframework-seleniumlibrary \
   requests \
   urllib3 \
   six \
+  pyautogui \
   selenium
 
 COPY tests /tests
