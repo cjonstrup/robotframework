@@ -5,6 +5,7 @@ RUN apt -y update && \
 
 RUN pip3 install \
   --no-cache-dir \
+  --upgrade \
   robotframework \
   robotframework-seleniumlibrary \
   requests \
