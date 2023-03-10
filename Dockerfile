@@ -22,7 +22,7 @@ COPY tests /tests
 
 WORKDIR /tests
 
-CMD [ "python", "./test.py" ]
+CMD [ "python -m robot test.robot" ]
 
 
 #docker build --no-cache -t test .
