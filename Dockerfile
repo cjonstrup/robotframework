@@ -2,7 +2,7 @@
 FROM ubuntu:22.04
 
 RUN apt -y update && \
-	apt -y install vim mc npm nodejs
+	apt -y install vim mc npm nodejs python3-pip
 
 RUN pip3 install \
     --no-cache-dir \
