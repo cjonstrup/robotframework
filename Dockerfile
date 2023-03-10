@@ -2,7 +2,7 @@
 FROM ubuntu:22.04
 
 RUN apt -y update && \
-    apt -y install vim mc npm nodejs python3-pip && \
+    apt -y install vim mc npm nodejs python3-pip curl && \
     npm install -g n
 
 RUN pip3 install \
