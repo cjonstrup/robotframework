@@ -1,4 +1,5 @@
-FROM python:3.8
+#FROM python:3.8
+FROM ubuntu:22.04
 
 RUN apt -y update && \
 	apt -y install vim mc npm nodejs
@@ -23,7 +24,7 @@ COPY tests /tests
 
 WORKDIR /tests
 
-CMD [ "python -m robot test.robot" ]
+CMD [ "python" "-m robot test.robot" ]
 
 
 #docker build --no-cache -t test .
