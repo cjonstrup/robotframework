@@ -2,7 +2,9 @@
 FROM ubuntu:22.04
 
 RUN apt -y update && \
-	apt -y install vim mc npm nodejs python3-pip
+    apt -y install vim mc npm nodejs python3-pip && \
+    npm install -g n && \
+    n lts
 
 RUN pip3 install \
     --no-cache-dir \
@@ -24,7 +26,7 @@ COPY tests /tests
 
 WORKDIR /tests
 
-CMD [ "python"]
+CMD [ "python3"]
 
 
 #docker build --no-cache -t test .
