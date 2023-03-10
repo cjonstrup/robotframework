@@ -9,6 +9,7 @@ RUN pip3 install \
     chardet \
     robotframework \
     robotframework-seleniumlibrary \
+    robotframework-browser \
     requests \
     certifi \
     urllib3 \
