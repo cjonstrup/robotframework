@@ -1,7 +1,7 @@
 FROM python:3.8
 
 RUN apt -y update && \
-	apt -y install vim mc
+	apt -y install vim mc npm nodejs
 
 RUN pip3 install \
     --no-cache-dir \
