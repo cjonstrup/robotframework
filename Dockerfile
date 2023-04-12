@@ -17,10 +17,7 @@ RUN pip3 install \
     certifi \
     urllib3 \
     six \
-    pyautogui \
-    selenium \
-    webdrivermanager && \
-    webdrivermanager chrome --linkpath /usr/local/bin
+    pyautogui
 
 COPY tests /tests
 
